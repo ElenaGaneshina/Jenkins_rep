@@ -5,6 +5,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Description;
+import ru.yandex.qatools.allure.annotations.Title;
 
 import static com.codeborne.selenide.Selenide.close;
 
@@ -15,6 +17,8 @@ import static com.codeborne.selenide.Selenide.close;
         glue = "steps"
 )
 
+@Title("Test checks Different Element Page")
+@Description("To check Allure report")
 public class CucumberTest extends AbstractTestNGCucumberTests{
 
     @BeforeClass
