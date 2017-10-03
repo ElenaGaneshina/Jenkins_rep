@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CucumberSuit" verbose="1" >
+    <test name="CucumberTest" >
+        <parameter name="cucTest" value="true"/>
+        <classes>
+            <class name = "CucumberTest"/>
+        </classes>
+    </test>
+</suite>
