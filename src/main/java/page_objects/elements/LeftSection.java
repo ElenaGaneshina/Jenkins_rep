@@ -5,18 +5,21 @@ import enums.ServiceMenu;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import static com.codeborne.selenide.Condition.text;
 
 public class LeftSection {
 
     @FindBy(css = ".sidebar-menu>li>a")
-    private ElementsCollection leftSectionItems;
+    public ElementsCollection leftSectionItems;
 
 
     @FindBy(css = ".sub>li>a")
-    private ElementsCollection serviceLeftMenuElements;
+    public ElementsCollection serviceLeftMenuElements;
 
+    @Step("Click on Service subcategory in the left section and check that drop down contains options")
     public void checkLeftServiceMenu(){
         leftSectionItems.findBy(text("Service")).click();
         serviceLeftMenuElements.shouldHave(CollectionCondition.texts(
