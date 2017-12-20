@@ -49,4 +49,5 @@ public class CheckDifferentElementsPage extends ExtensionForTests {
         differentElementPage.checkLog(Log.WIND_FALSE.log);
 
     }
+    //new method
 }
